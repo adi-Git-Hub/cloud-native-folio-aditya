@@ -9,27 +9,20 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-      
-      {/* Overlay Gradient */}
-      <div className="absolute inset-0 hero-gradient z-10"></div>
-      
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Content */}
       <div className="relative z-20 container-custom text-center px-4">
         <div className="animate-fade-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-tech-dark">
+          {/* Profile Picture */}
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/d61e2c70-381a-4e73-9424-34acdeb268e2.png" 
+              alt="Aditya Pande"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto object-cover shadow-lg border-4 border-primary/20"
+            />
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
             Hi, I'm <span className="gradient-text">Aditya Pande</span>
           </h1>
           
